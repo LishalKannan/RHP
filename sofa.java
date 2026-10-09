@@ -90,12 +90,12 @@ public class Main{
                 }
             }
             else{
-                if(s.fsr>0 && house[s.fsr-1][s.fsc]!='H' && house[s.ssr-1][s.ssc]!='H'){
+                if(s.fsr>0 && s.ssr>0 && house[s.fsr-1][s.fsc]!='H' && house[s.ssr-1][s.ssc]!='H'){
                     if(canAdd(s.fsr-1,s.fsc,s.ssr-1,s.ssc,vis)){
                         q.add(new sofa(s.fsr-1,s.fsc,s.ssr-1,s.ssc,'V',s.moves+1));
                     }
                 }
-                if(s.fsr<r-1 && house[s.fsr+1][s.fsc]!='H' && house[s.ssr+1][s.ssc]!='H'){
+                if(s.fsr<r-1 && s.ssr<r-1 && house[s.fsr+1][s.fsc]!='H' && house[s.ssr+1][s.ssc]!='H'){
                     if(canAdd(s.fsr+1,s.fsc,s.ssr+1,s.ssc,vis)){
                         q.add(new sofa(s.fsr+1,s.fsc,s.ssr+1,s.ssc,'V',s.moves+1));
                     }
